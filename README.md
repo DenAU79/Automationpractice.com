@@ -16,8 +16,7 @@ Google Chrome Version 96.0.0
 
 1. Git clone https://github.com/DenAU79/Rentalcover_DZ.git
 2. Run following command in a terminal: npm i
-3. To run all specs - npx wdio wdio.conf.js
-4. To run allure-results - allure serve allure-results/allure-raw
+3. To run test file - npx wdio wdio.conf.js
 
 ## 😋 Who cooked it?
 
