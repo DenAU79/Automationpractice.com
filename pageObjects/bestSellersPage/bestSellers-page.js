@@ -23,8 +23,7 @@ class BestSellers {
           this.$closeAddItemWindowBtn.click();
           this.$closeAddItemWindowBtn.waitForDisplayed({ reverse: true });
         }
-      });
-      this.$closeAddItemWindowBtn.waitForDisplayed({ reverse: true });
+      });      
       Homepage.$shoppingCartBtn.scrollIntoView();
       return cart;
     }      
