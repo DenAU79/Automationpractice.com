@@ -2,13 +2,9 @@
 const Homepage = require("../homepage/homepage-page");
 
 class BestSellers {
-    get $bestSellersTable() { return $("#blockbestsellers.active"); }
-    get $$bestSellersItemsPrices() { return $$("#blockbestsellers .ajax_block_product .right-block .price"); }
-    get $$bestSellersItemsNames() { return $$("#blockbestsellers .ajax_block_product .right-block .product-name"); }
+    get $bestSellersTable() { return $("#blockbestsellers.active"); }        
     get $$bestSellersItems() { return $$("#blockbestsellers .ajax_block_product .right-block"); }
-    get $closeAddItemWindowBtn() { return $('[title="Close window"]'); }
-    
-
+    get $closeAddItemWindowBtn() { return $('[title="Close window"]'); }    
 
     // Helper method to add an item to cart from Best Sellers by price
     getBestSellersItemsByPrice(price) {
