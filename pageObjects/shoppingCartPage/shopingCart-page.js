@@ -23,7 +23,5 @@ class ShoppingCart {
             browser.pause(2000);            
         });        
     }
-
-
 }
 module.exports = new ShoppingCart();

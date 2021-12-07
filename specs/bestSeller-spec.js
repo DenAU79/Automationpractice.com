@@ -6,7 +6,7 @@ const ShoppingCart = require("../pageObjects/shoppingCartPage/shopingCart-page")
 
 describe("Best Sellers", () => {
   it("Get items by price, verify cart, delete items from cart", () => {
-    // Open "rentalcover.com" homepage
+    // Open "Automationpractice.com" homepage
     browser.url("./");
 
     // Click on Best Sellers btn
@@ -22,7 +22,9 @@ describe("Best Sellers", () => {
     ShoppingCart.$proceedToCheckoutBtn.waitForDisplayed();
 
     // Verify that shopping cart contains each item added with the correct quantity and price
-    expect(Object.keys(shoppingCart).length).to.equal(ShoppingCart.$$shoppingCartItemRows.length);    
+    expect(Object.keys(shoppingCart).length).to.equal(
+      ShoppingCart.$$shoppingCartItemRows.length
+    );
     ShoppingCart.$$shoppingCartItemRows.every((i) => {
       expect(shoppingCart).to.have.property(i.$(".product-name").getText());
       expect(shoppingCart[i.$(".product-name").getText()]).to.equal(
