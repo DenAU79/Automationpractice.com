@@ -7,9 +7,7 @@ class ShoppingCart {
     get $$shoppingCartTrashColumn() { return $$(".icon-trash"); }
     get $shoppingCartEmptyLbl() { return $(".ajax_cart_no_product"); }
 
-    
-    
-    
+    // Method to calculate total price for the items in the Cart without shipping costs
     getShoppingCartTotalWithoutSipping() {
         let sum = 0;
         for (let i = 0; i < this.$$shoppingCartTotalRow.length; i++) {
@@ -18,13 +16,12 @@ class ShoppingCart {
         return sum;
     }
 
+    // Method to delete each item from the Cart
     clearShoppingCart() {
-
         this.$$shoppingCartTrashColumn.forEach((element) => {
             element.click()
             browser.pause(2000);            
-        });
-        
+        });        
     }
 
 

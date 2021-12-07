@@ -14,7 +14,7 @@ describe("Best Sellers", () => {
     Homepage.$bestSellersBtn.click();
     expect(BestSellers.$bestSellersTable).to.exist;
 
-    // Object of suitable items with a property name as an Item title and it's value as an Item price
+    // Add items to the shopping cart
     const shoppingCart = BestSellers.getBestSellersItemsByPrice(30);
 
     // Press shopping cart button
@@ -31,7 +31,7 @@ describe("Best Sellers", () => {
       expect(i.$(".cart_quantity_input").getValue()).to.equal("1");
     });
 
-    // Check the total of cart items
+    // Check the total price of cart items is correct
     expect(
       parseFloat(
         ShoppingCart.$shoppingCartTotalSumNoShipping.getText().replace("$", "")
