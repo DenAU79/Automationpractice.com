@@ -10,7 +10,6 @@ class BestSellers {
     getBestSellersItemsByPrice(price) {
       // Object of suitable items with a property name as an Item title and it's value as an Item price
       let cart = {};
-
       // Loop through an array of Best Sellers items
       this.$$bestSellersItems.forEach((element) => {
         let itemPrice = parseFloat(element.$(".price").getText().replace("$", ""));

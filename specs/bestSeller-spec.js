@@ -38,7 +38,7 @@ describe("Best Sellers", () => {
       parseFloat(
         ShoppingCart.$shoppingCartTotalSumNoShipping.getText().replace("$", "")
       )
-    ).to.equal(ShoppingCart.getShoppingCartTotalWithoutSipping());
+    ).to.equal(ShoppingCart.getShoppingCartTotalWithoutShipping());
 
     // Remove all items from the shopping cart
     ShoppingCart.clearShoppingCart();

@@ -8,7 +8,7 @@ class ShoppingCart {
     get $shoppingCartEmptyLbl() { return $(".ajax_cart_no_product"); }
 
     // Method to calculate total price for the items in the Cart without shipping costs
-    getShoppingCartTotalWithoutSipping() {
+    getShoppingCartTotalWithoutShipping() {        
         let sum = 0;
         for (let i = 0; i < this.$$shoppingCartTotalRow.length; i++) {
           sum += parseFloat(this.$$shoppingCartTotalRow[i].getText().replace("$", ""));
